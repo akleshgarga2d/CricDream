@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+            <item
+                android:title="Ipl"
+                android:id="@+id/action_ipl"
+                android:actionLayout="@layout/menu_text_lay"/>
+            <item
+                android:id="@+id/action_odm"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="One Day Match"/>
+    <item
+        android:id="@+id/action_tm"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Test Match"/>
+
+
+
+</menu>

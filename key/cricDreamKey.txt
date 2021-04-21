@@ -1,0 +1,4 @@
+password - cricDream@
+alias key - cricDream0
+path - F:\officeProject\newApps ForCricket\cricDream\key\cricdream.jks
+

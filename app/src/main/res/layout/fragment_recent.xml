@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+   <ImageView
+       android:id="@+id/info_btn"
+       android:layout_width="50dp"
+       android:layout_height="30dp"
+       android:src="@drawable/ic_baseline_info_24"
+       android:layout_margin="6dp"
+       android:layout_alignParentRight="true"
+
+       />
+
+   <ListView
+       android:id="@+id/recent_list_lv"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/info_btn"
+       android:layout_margin="@dimen/_3sdp"
+       android:divider="@android:color/transparent"
+       tools:listitem="@layout/livelist_item"
+
+       />
+
+</RelativeLayout>

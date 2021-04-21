@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/live_bg"
+    tools:context=".activities.CompletedActivity">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_title" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/rounded_view"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:id="@+id/imageView_team1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imageView_team1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team1_short_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuii"
+                                android:text="00"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/team1_runs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="#000000"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/team1_overs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui"
+                                android:text="00"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvVS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight=".4"
+                        android:fontFamily="@font/seguisbi"
+                        android:text="V/S"
+                        android:textColor="#000000"
+                        android:textSize="12dp" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:id="@+id/imageView_team2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imageView_team2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team2_short_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuii"
+                                android:text="00"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/team2_runs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="#000000"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/team2_overs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui"
+                                android:text="00"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/rounded_view"
+                    android:layout_margin="16dp"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:id="@+id/imageView_team1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/gradient1"
+                            android:layout_centerVertical="true"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imageView_team1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team1_short_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuii"
+                                android:textSize="16dp"
+                                android:text="-"/>
+
+                            <TextView
+                                android:id="@+id/team1_runs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuib"
+                                android:textColor="#000000"
+                                android:textSize="16dp"
+                                android:text="-"/>
+
+                            <TextView
+                                android:id="@+id/team1_overs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui"
+                                android:textSize="10dp"
+                                android:text="-"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvVS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/seguisbi"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:text="V/S"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true">
+
+                        <ImageView
+                            android:id="@+id/imageView_team2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/gradient1"
+                            android:layout_centerVertical="true"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imageView_team2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team2_short_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuii"
+                                android:textSize="16dp"
+                                android:text="-"/>
+
+                            <TextView
+                                android:id="@+id/team2_runs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="-"
+                                android:textColor="#000000"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/team2_overs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui"
+                                android:textSize="10dp"
+                                android:text="-"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="25"
+                        android:background="@color/dark_indigo">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/remaining_balls"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeui"
+                                android:text="Remaining Balls"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="25"
+                        android:background="@color/dark_indigo">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/need_runs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="@color/white" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeui"
+                                android:text="Need Runs"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="25"
+                        android:background="@color/dark_indigo">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/current_run_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="@color/white" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeui"
+                                android:text="CRR"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        android:background="@color/dark_indigo">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/run_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeuib"
+                                android:text="00"
+                                android:textColor="@color/white" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/segoeui"
+                                android:text="RRR"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient1"
+                            app:tabGravity="fill"
+                            app:tabMode="scrollable"
+                            app:tabRippleColor="#1b1d5c"
+                            app:tabSelectedTextColor="#1b1d5c"
+                            app:tabTextColor="#eff1fe" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/info_lay"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!--android:background="@drawable/backgroung_im"-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_15sdp">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/_15sdp"
+          android:orientation="vertical">
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/_15sdp"
+              android:layout_marginLeft="@dimen/_10sdp">
+
+              <TextView
+                  android:layout_width="@dimen/_95sdp"
+                  android:layout_height="wrap_content"
+                  android:layout_column="1"
+                  android:fontFamily="@font/seguisb"
+                  android:text="Venue"
+                  android:textSize="12dp" />
+
+              <!--    <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+              <TextView
+                  android:id="@+id/match_infos"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_column="2"
+                  android:layout_marginLeft="10dp"
+                  android:fontFamily="@font/segoeui"
+                  android:text=""
+                  android:textSize="12dp" />
+          </LinearLayout>
+
+              <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Match"
+                      android:textSize="12dp" />
+
+              <!--    <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text=""
+                      android:textSize="12dp" />
+              </LinearLayout>
+       <!--   <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+              <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Match Type"
+                      android:textSize="12dp" />
+
+                <!--  <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_type"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text=""
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+              <!--<View
+                  android:layout_width="match_parent"
+                  android:layout_height="0.5dp"
+                  android:layout_marginLeft="@dimen/_12sdp"
+                  android:background="@android:color/darker_gray" />
+-->
+              <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Date"
+                      android:textSize="12dp" />
+
+                <!--  <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_date"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text=""
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+      <!--    <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Series"
+                      android:textSize="12dp" />
+
+         <!--         <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_series"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text=""
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+         <!-- <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Toss"
+                      android:textSize="12dp" />
+<!--
+
+                  <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+
+                  <TextView
+                      android:id="@+id/match_toss"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Status"
+                      android:textSize="12dp" />
+
+                 <!-- <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_status"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />-->
+
+
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Umpire"
+                      android:textSize="12dp" />
+<!--
+
+                  <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+
+                  <TextView
+                      android:id="@+id/match_umpire"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="3rd Umpire"
+                      android:textSize="12dp" />
+
+        <!--          <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_three_umpire"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+         <!-- <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Refree"
+                      android:textSize="12dp" />
+<!--
+
+                  <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="@dimen/_40sdp"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+
+                  <TextView
+                      android:id="@+id/match_refree"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+         <!-- <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+          <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/_15sdp"
+                  android:layout_marginLeft="@dimen/_10sdp">
+
+                  <TextView
+                      android:layout_width="@dimen/_95sdp"
+                      android:layout_height="wrap_content"
+                      android:layout_column="1"
+                      android:fontFamily="@font/seguisb"
+                      android:text="Detail"
+                      android:textSize="12dp" />
+
+                 <!-- <View
+                      android:layout_width="0.5dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/_20sdp"
+                      android:background="@android:color/darker_gray" />
+-->
+                  <TextView
+                      android:id="@+id/match_desc"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_column="2"
+                      android:layout_marginLeft="10dp"
+                      android:fontFamily="@font/segoeui"
+                      android:text="--"
+                      android:textSize="12dp" />
+              </LinearLayout>
+
+          <!--<View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginLeft="@dimen/_12sdp"
+              android:background="@android:color/darker_gray" />
+-->
+      </LinearLayout>
+  </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

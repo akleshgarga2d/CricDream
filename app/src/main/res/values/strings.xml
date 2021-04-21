@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Cric Dream</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="over_text">38\nOvers</string>
+    <string name="banner_score_home">ca-app-pub-7888322208472236/4627605338</string>
+    <string name="banner_result_home">ca-app-pub-8605468793237940/6265553197</string>
+    <string name="desc">Yuvraj Singh had announced his retirement from international cricket last year on June 10, 2019. The left-handed batsman was famous for his ability to hit sixes with ease. One of the most memorable knocks that Yuvraj played was in the 2007 T20 World Cup against England. During the match, Yuvraj Singh went on to smash six sixes in an over against Stuart Broad and became the first batsman to achieve the feat in T20I cricket.
+
+Yuvraj scored 58 off 16 balls which proved to be a match-winning performance.
+Yuvraj Singh featured in 304 ODIs for the country and scored 8,701 runs within an average of 36.55. In T20Is, Yuvraj played 59 matches for India and scored 1177 runs averaging 28.02 with a strike rate of 136.38.
+
+The left-handed batsman played 40 Test matches for India and has 1900 runs to his name with an average of 33.92.</string>
+    <string name="match_abandoned">MATCH abandoned</string>
+
+    <string name="check_update_m">Cric Dream Up to date\nNo latest version found</string>
+
+    <string name="about">Cric Dream is created with the vision of giving cricket fans everything related to cricket seamlessly. The app features multiple live coverage of cricket matches with accurate odds, scoreboard, scorecard, fixtures, player rankings, team rankings."</string>
+    <string name="privacy_m">Privacy Policy\n\nOur extensive knowledge about the system and corresponding analysis enables us to provide an approximate of the match winning chances. Cric Dream by no means supports betting and we are not responsible for any unlawful action taken on the part of the user. The app is meant purely for entertainment purposes. The user is solely responsible for any illegal activates done by them.\n\nUser Information:\n\nThe information provided by the users enables us to improve our application and provide you the most user-friendly experience. All required information is service dependent and we may use the above-said user information to, maintain, protect and improve services and for developing new services\n\nInformation security:\n\nAll the information gathered on our App is securely stored within our controlled database. The database is stored on the servers is password protected and is strictly limited. However, as effective as our security measures are, no security system is impenetrable. We cannot guarantee the security of our database, nor can we guarantee that information provided by you will not be intercepted while being transmitted to us over the internet. We may change our privacy policy from time to time to incorporate necessary future changes.</string>
+    <string name="terms_m">Terms of use\n\nThis page states the terms and conditions under which you (Visitor) may visit this application. Please read this page carefully.\n\nCric Dream is the cricket score and news application the odds and session displayed are based in our experience and analysis of system. We do not support or promote betting, gambling, legal or illegal. We are not responsible if betting is not legal in your country/state and you use Cric Dream for any kind of illegal activity. The app is not for betting or supporting, this is meant for fun and entertainment purpose.\n\nUse of content:\nThe use of properties of the app like app logo, app name, except as provided in these terms and conditions or in the app content, is strictly prohibited. You not sell or modify the content of this application or reproduce, display, publicly perform, distribute, or otherwise use the materials in any way for any public or commercial purpose without the respective organisations’s or entity’s written permission.\n\nDisclaimer of consequential damage:\n\nThe provider is not responsible for any loss or damage, direct or indirect, that the user might have suffered as result of using the app. The provider is not responsible for winnings made or loosed suffered with the third party which result from the use of information displayed on the mobile app.</string>
+
+</resources>

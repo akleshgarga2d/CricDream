@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.livescore.CricDream.activities.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/topside_v"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginBottom="3dp" />
+
+        <LinearLayout
+            android:id="@+id/SliderDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/feature_video_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="center_vertical"
+                android:text="Featured Videos"
+                android:textColor="#151757"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/featured_v"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_below="@+id/feature_video_title"
+                android:layout_marginTop="16dp"
+                android:scrollbars="horizontal"
+                android:visibility="gone" />
+
+            <!-- <TextView
+                 android:id="@+id/t2"
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:text="Latest Feed"
+                 android:textSize="15dp"
+                 android:textStyle="bold"
+                 android:layout_below="@+id/featured_v"
+                 android:gravity="center_vertical"/>
+
+
+                 <FrameLayout
+                     android:id="@+id/f1"
+                     android:layout_marginTop="10sp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/t2">
+                     <androidx.cardview.widget.CardView
+                         android:id="@+id/c1"
+                         android:layout_width="match_parent"
+                         android:layout_height="400sp"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="10dp"
+                         app:cardBackgroundColor="#ffffff"
+                         app:cardCornerRadius="10dp"
+                         >
+                         <ListView
+                             android:id="@+id/latest_feed_lv"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_margin="20dp"
+                             tools:listitem="@layout/feed_item"
+                             android:background="#ffffff"/>
+
+                     </androidx.cardview.widget.CardView>
+                 </FrameLayout>
+                 <ImageView
+                     android:layout_width="40sp"
+                     android:layout_height="40sp"
+                     android:id="@+id/dotted_im1"
+                     android:layout_centerInParent="true"
+                     android:layout_below="@+id/t2"
+                     android:layout_marginTop="392dp"
+                     android:background="@drawable/circle_more"
+                     />-->
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="center_vertical"
+                android:text="Latest News"
+                android:textColor="#151757"
+                android:textSize="18dp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/s1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_below="@+id/t3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/f2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10sp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/c2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:cardCornerRadius="10dp">
+
+                            <ListView
+                                android:id="@+id/latest_news_lv"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:background="#ffffff"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:overScrollMode="never"
+                                android:scrollbars="none"
+                                tools:listitem="@layout/news_item" />
+
+                            <ProgressBar
+                                android:id="@+id/progresBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="30dp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/more_news"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_below="@+id/f2"
+                        android:layout_marginBottom="@dimen/_35sdp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_baseline_more_horiz_24" />
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

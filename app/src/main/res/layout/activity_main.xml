@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/live_bg"
+    tools:context="com.livescore.CricDream.activities.MainActivity">
+    <!--
+    android:background="@drawable/backgroung_im"-->
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     >
+
+        <ImageView
+            android:id="@+id/title_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:src="@drawable/logo_title" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rvBanner"
+        android:layout_below="@+id/top" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivbanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_result_home" />
+
+    <RelativeLayout
+        android:id="@+id/adMobView"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_above="@+id/navigation"
+        android:gravity="center_horizontal" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient1"
+        android:visibility="visible"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation" />
+
+    <!--<include layout="@layout/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_alignParentBottom="true"/>-->
+
+</RelativeLayout>

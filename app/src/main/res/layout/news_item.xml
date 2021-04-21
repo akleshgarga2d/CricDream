@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relNewsItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/listview_bg"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/news_im"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launchernew_round" />
+
+            <WebView
+                android:id="@+id/web_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/c1"
+            android:maxLines="1"
+            android:text="Lorem ipsum dolor sit amet"
+            android:textColor="@color/text_blue"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/c1"
+            android:maxLines="2"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor "
+            android:textColor="@color/text_blue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/news_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_desc"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/c1"
+            android:maxLines="1"
+            android:text="https://t.c/download.com"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/news_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_desc"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/c1"
+            android:gravity="center_vertical"
+            android:text="05 March,2020  .  11:50 PM, Thu"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

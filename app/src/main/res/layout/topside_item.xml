@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recent_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.livescore.CricDream.activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="6dp"
+       >
+
+        <LinearLayout
+            android:id="@+id/bg_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/match_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <ImageView
+                android:id="@+id/live_indicator"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/live_red" />
+
+            <TextView
+                android:id="@+id/next_live_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/seguisb"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="NEXT LIVE MATCH"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/countdown_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/next_live_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/seguisb"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/text_green"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/teams_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvShortNames1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/seguisbi"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/vs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/seguisbi"
+                    android:gravity="center"
+                    android:text="Vs"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvShortNames2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/seguisbi"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/live_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/teams_l"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/match_abond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/seguisbi"
+                    android:gravity="center"
+                    android:text="@string/match_abandoned"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/timer_l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/countdown_text_o"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/text_green"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/score_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/team1_logo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launchernew_round" />
+
+                    <LinearLayout
+                        android:id="@+id/team1_score_l"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/team1_logo"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/team1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:maxLines="1"
+                            android:text="-"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/team1_runs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seguibl"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/team1_overs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/vsiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/seguibl"
+                        android:text="V/S"
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/team2_logo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/vsiv"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launchernew_round" />
+
+                    <LinearLayout
+                        android:id="@+id/team2_score_l"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_toEndOf="@+id/team2_logo"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/team2_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:maxLines="1"
+                            android:paddingEnd="@dimen/_3sdp"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:id="@+id/team2_runs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seguibl"
+                            android:maxLines="1"
+                            android:paddingEnd="@dimen/_3sdp"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/team2_overs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:maxLines="1"
+                            android:paddingEnd="@dimen/_3sdp"
+                            android:text="-"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/live_container"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

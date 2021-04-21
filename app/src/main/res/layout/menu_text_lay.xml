@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/im1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/dot_yellow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/im1"
+            android:fontFamily="@font/seguisbi"
+            android:text="Indian Premier League"
+            android:textColor="@color/text_blue"
+
+            android:textSize="12dp" />
+    </RelativeLayout>
+    <RelativeLayout
+       android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/im2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/light_blue_dot"/>
+        <TextView
+            android:layout_toRightOf="@+id/im2"
+            android:textSize="12dp"
+            android:textColor="@color/text_blue"
+            android:fontFamily="@font/seguisbi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="One Day Match"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/im3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/active_dot"/>
+        <TextView
+            android:layout_toRightOf="@+id/im3"
+            android:textSize="12dp"
+            android:textColor="@color/text_blue"
+            android:fontFamily="@font/seguisbi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Test Match"/>
+    </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/live_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LiveFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/watchliveicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/seguisb"
+                            android:text="Watch Live"
+                            android:textColor="#39b54a"
+                            android:textSize="5dp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_live_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/livescrorebg" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/last_run"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/seguisbi"
+                        android:text="- Runs"
+                        android:textColor="@color/white"
+                        android:textSize="25dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_view_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_live_tv"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Recent Balls"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_view_rb"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/ball1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball1_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball1_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ball2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball2_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball2_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ball3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball3_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball3_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ball4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball4_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball4_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ball5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball5_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball5_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ball6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ball6_im"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/runs" />
+
+                        <TextView
+                            android:id="@+id/ball6_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuib"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/rounded_view">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/view_card" />
+
+                        <TextView
+                            android:id="@+id/tvMarketrate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvFavoriteteam"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:fontFamily="@font/seguisbi"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/view_card" />
+
+                        <TextView
+                            android:id="@+id/tvMarketrate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/view_card" />
+
+                        <TextView
+                            android:id="@+id/tvSession1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/now_overs"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:fontFamily="@font/seguisbi"
+                        android:gravity="center_horizontal"
+                        android:text="- OVER"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/view_card" />
+
+                        <TextView
+                            android:id="@+id/tvSession2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/seguisbi"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/dark_indigo"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:text="Open: -"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:fontFamily="@font/segoeui"
+                            android:text="Min: -"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:text="Max: -"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_5sdp">
+                    <!-- <HorizontalScrollView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:stretchColumns="1">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:singleLine="true"
+                                    android:text="Batsman"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="100">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_8sdp"
+                                        android:layout_weight="20"
+                                        android:fontFamily="@font/segoeuib"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="R"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="20"
+                                        android:fontFamily="@font/segoeuib"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="B"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="20"
+                                        android:fontFamily="@font/segoeuib"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="4S"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="20"
+                                        android:fontFamily="@font/segoeuib"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="6S"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_weight="20"
+                                        android:fontFamily="@font/segoeuib"
+                                        android:gravity="center"
+                                        android:text="SR"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10dp" />
+
+                                </LinearLayout>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="#d6d6d6" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/bat_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/batting_item" />
+                    </LinearLayout>
+                    <!--</HorizontalScrollView>-->
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:id="@+id/current_partnership"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui"
+                            android:text="Current Partnership -"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.2dp" />
+
+
+                        <TextView
+                            android:id="@+id/target"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_toEndOf="@+id/current_partnership"
+                            android:layout_toRightOf="@+id/current_partnership"
+                            android:fontFamily="@font/segoeui"
+                            android:text="Target: -"
+                            android:textAlignment="textEnd"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.2dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeuib"
+                                android:singleLine="true"
+                                android:text="Bowler"
+                                android:textColor="@android:color/black"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_weight="20"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="O"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_weight="20"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="M"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_weight="20"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="R"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_weight="20"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="W"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_weight="20"
+                                    android:fontFamily="@font/segoeuib"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="ECO"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="#d6d6d6" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ball_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            tools:listitem="@layout/bowling_item" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

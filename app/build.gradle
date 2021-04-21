@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+   /* signingConfigs {
+        debug {
+            storePassword 'cricDream@123'
+            keyPassword 'cricDream@123'
+            keyAlias 'cricDream0'
+            storeFile file('F:\\workSpace\\CricOraAndroid-develop\\key\\keystore.jks')
+        }
+    }*/
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+            applicationId "com.livescore.CricDream"
+            minSdkVersion 21
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-ads:19.5.0'
+    testImplementation 'junit:junit:4.12'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
+    implementation 'com.google.android.material:material:1.2.0-alpha04'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.github.florent37:shapeofview:1.3.2'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.squareup.okhttp:okhttp:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.android.support:design:+'
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    // implementation 'com.airbnb.android:lottie:$lottieVersion'
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    //admob
+    implementation 'com.google.android.gms:play-services-ads:19.0.0'
+
+
+}

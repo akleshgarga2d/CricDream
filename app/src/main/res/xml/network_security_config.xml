@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--Set application-wide security config using base-config tag.-->
+  <!--  <base-config cleartextTrafficPermitted="false"/>-->
+
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://75.101.138.121:5000/</domain><!--Your URL(ex: 127.0.0.1)-->
+    </domain-config>
+
+</network-security-config>
